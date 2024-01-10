@@ -1,3 +1,0 @@
-<script>
-  netlifyIdentity.init();
-</script>
