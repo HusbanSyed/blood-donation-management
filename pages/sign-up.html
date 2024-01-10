@@ -8,7 +8,6 @@
         <meta name="keywords" content="project, blood donation management, blood donation">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/styles.css">
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
         <header>
@@ -28,20 +27,19 @@
             <div class="content-area">
                 <div class="regiForm">
                     <h2 style="text-align: center;">Sign Up</h2>
-                    <form id="signup-form" onsubmit="return false;">
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" id="fullname" name="fullname" required><br><br>
-                      
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                      
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required><br><br>
-                      
-                        <input type="submit" value="Sign Up" id="regi-btn" style="margin-left: 35%;" onclick="signUp()">
-                      </form>
-                      <p style="text-align: center;">Already have an account? <button onclick="document.location='/pages/sign-in.html'">Sign in</button></p>
-                                          
+                    <form>
+                      <label for="fullname">Full Name:</label>
+                      <input type="text" id="fullname" name="fullname" required><br><br>
+                
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required><br><br>
+                
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required><br><br>
+                
+                      <input type="submit" value="Sign Up" id="regi-btn" style="margin-left: 35%;">
+                    </form>
+                    <p style="text-align: center;">Already have a account? <button onclick="document.location='/pages/sign-in.html'">Sign in</button></p>
                 </div>
             </div>
         </section>
@@ -50,24 +48,5 @@
                 © 2024 Blood Donation Management System. All rights reserved.
             </p>
         </footer>
-        <script>
-            function signUp() {
-              const form = document.getElementById('signup-form');
-              const fullName = form.querySelector('#fullname').value;
-              const email = form.querySelector('#email').value;
-              const password = form.querySelector('#password').value;
-          
-              // Use Netlify Identity to sign up
-              netlifyIdentity.open('signup');
-              
-              // You can also use the following code for programmatic sign-up
-              /*
-              netlifyIdentity.signup(email, password, {
-                full_name: fullName,
-              });
-              */
-            }
-          </script>
-          <script src="/id.js"> </script>
     </body>
 </html>
